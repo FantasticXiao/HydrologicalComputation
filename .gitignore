@@ -1,0 +1,7 @@
+*.properties
+.idea
+*.iml
+*.ipr
+*.iws
+out
+test
