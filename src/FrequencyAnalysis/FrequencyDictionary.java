@@ -144,13 +144,12 @@ public class FrequencyDictionary {
         double[] fai=getFaiListByCs(cs);
         int temp=0;
         for (int i=0;i<25;i++) {
-            if (FREQUENCY[i] <= frequency && FREQUENCY[i] >= frequency) {
+            if (FREQUENCY[i] <= frequency && FREQUENCY[i+1] >= frequency) {
                 temp = i;
                 break;
             }
         }
-        double faiTemp=fai[temp+1]+(FREQUENCY[temp+1]-frequency)*(fai[temp]-fai[temp+1])
-                /(FREQUENCY[temp+1]-FREQUENCY[temp]);
+        double faiTemp=fai[temp+1]-(FREQUENCY[temp+1]-frequency)*(fai[temp+1]-fai[temp]) /(FREQUENCY[temp+1]-FREQUENCY[temp]);
         return new BigDecimal(ex*(cv*faiTemp+1))
                 .setScale(3,BigDecimal.ROUND_HALF_UP).doubleValue();
     }

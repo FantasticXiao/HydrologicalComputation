@@ -80,12 +80,12 @@ public class PIIIFrequencyAnalysis {
         this.plotFrequencies = plotFrequencies;
     }
 
-    PIIIFrequencyAnalysis(double ex, double cv, double cs) {
+    public PIIIFrequencyAnalysis(double ex, double cv, double cs) {
         this.ex = ex;
         this.cs = cs;
         this.cv = cv;
     }
-    PIIIFrequencyAnalysis(double ex, double cv) {
+    public PIIIFrequencyAnalysis(double ex, double cv) {
         this.ex = ex;
         this.cv = cv;
         setCsv(csv);
@@ -95,7 +95,7 @@ public class PIIIFrequencyAnalysis {
      * there is no extrem value in data series
      * @param values series
      */
-    PIIIFrequencyAnalysis(List<Double> values) {
+    public PIIIFrequencyAnalysis(List<Double> values) {
         this.setPlotFrequencies(FrequencyDictionary.getPlotFrequencies());
         this.values = values;
         this.values.sort(Collections.reverseOrder());
@@ -115,7 +115,7 @@ public class PIIIFrequencyAnalysis {
      * @param a1 the count of first series
      * @param l1 the value which be count in first series who belongs to ordinary period
      */
-    PIIIFrequencyAnalysis(List<Double> values, int N1, int a1, int l1) {
+    public PIIIFrequencyAnalysis(List<Double> values, int N1, int a1, int l1) {
         this.setPlotFrequencies(FrequencyDictionary.getPlotFrequencies());
         this.values = values;
         this.values.sort(Collections.reverseOrder());
@@ -143,7 +143,7 @@ public class PIIIFrequencyAnalysis {
      * @param a2 the data size of second series
      * @param l2 the value which be count in second  series who belongs to ordinary period
      */
-    PIIIFrequencyAnalysis(List<Double> values, int N1, int a1, int l1, int N2, int a2, int l2) {
+    public PIIIFrequencyAnalysis(List<Double> values, int N1, int a1, int l1, int N2, int a2, int l2) {
         this.setPlotFrequencies(FrequencyDictionary.getPlotFrequencies());
         this.values = values;
         this.values.sort(Collections.reverseOrder());
