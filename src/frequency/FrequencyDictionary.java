@@ -1,11 +1,11 @@
-package FrequencyAnalysis;
+package frequency;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author amos
+ * @Author Amos Zhao
  * @Date 2018-4-20
  * @function get Fai instead of norminv function
  */
@@ -104,8 +104,8 @@ public class FrequencyDictionary {
             {14.22, 12.69, 10.7, 9.22, 7.771, 5.917, 4.573, 3.3, 2.598, 1.773, 0.795, 0.0579, -0.11, -0.218, -0.333, -0.379, -0.395, -0.3991, -0.3997, -0.3999, -0.4, -0.4, -0.4, -0.4, -0.4, -0.4}
     };
     /**
-     * get default frequency list
-     * @return frequency list
+     * get default java.frequency list
+     * @return java.frequency list
      */
     protected static List<Double> getPlotFrequencies(){
         List<Double> temp= new ArrayList<>();
@@ -130,12 +130,12 @@ public class FrequencyDictionary {
         return tmp;
     }
     /**
-     *get value by frequency
+     *get value by java.frequency
      * @param ex mean value
      * @param cv coefficient of variation
      * @param cs coefficient of skew
-     * @param frequency 0~1 frequency need to be checked %
-     * @return value of needed frequency
+     * @param frequency 0~1 java.frequency need to be checked %
+     * @return value of needed java.frequency
      */
     protected static double getValueByFrequency(double ex,double cv,double cs,double frequency){
         if(frequency<0.01||frequency>=99.7){
@@ -155,12 +155,12 @@ public class FrequencyDictionary {
     }
 
     /**
-     *get frequency with specific value under certain parameter
+     *get java.frequency with specific value under certain parameter
      * @param ex mean value
      * @param cv coefficient of variation
      * @param cs coefficient of skew
      * @param value value need to be checked
-     * @return frequency between 0 and 1  %
+     * @return java.frequency between 0 and 1  %
      */
     protected static double getFrequencyByValue(double ex,double cv,double cs,double value){
         double[] fai=getFaiListByCs(cs);

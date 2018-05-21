@@ -1,4 +1,4 @@
-package FrequencyAnalysis;
+package frequency;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @function do frequency analysis with p-III distribute
+ * @function do java.frequency analysis with p-III distribute
  *            two return period
  * @Author Amos Zhao
  * @Data 2018.04.20
@@ -20,7 +20,7 @@ public class PIIIFrequencyAnalysis {
 
     /**
      * Important!!!
-     * the unit of  frequency is %
+     * the unit of  java.frequency is %
      * which means 0.999 in series is 99.9
      */
     private List<Double> frequencies=new ArrayList<>();
